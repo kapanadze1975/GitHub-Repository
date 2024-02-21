@@ -18,6 +18,29 @@ New-AzResourceGroup -Name Demo -Location "East US"
 New-AzResourceGroup -Name arm-vscode -Location eastus
 New-AzResourceGroupDeployment -ResourceGroupName arm-vscode -TemplateFile ./arm-templatedemo.json -TemplateParameterFile ./arm-templatedemo.parameters.json
 
+## Create Storage ARM Template
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "resources": [
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+      "apiVersion": "2021-04-01",
+      "name": "mystorageaccount1234", // Change this to a unique name
+      "location": "eastus", // Change the location if needed
+      "sku": {
+        "name": "Standard_LRS"
+      },
+      "kind": "StorageV2",
+      "properties": {}
+    }
+  ]
+}
+
+
+
+
+
 ## Clean up resources
 Remove-AzResourceGroup -Name arm-vscode
 
