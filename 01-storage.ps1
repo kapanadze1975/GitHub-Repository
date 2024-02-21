@@ -13,7 +13,7 @@ Get-AzResourceGroup
     ### LInk - https://learn.microsoft.com/en-us/powershell/module/az.resources/get-azresourcegroup?view=azps-11.3.0
 
 # Deploy Template
-$templateFile = "{provide-the-path-to-the-template-file}"
+$templateFile = "./arm-templatedemo.json"
 New-AzResourceGroupDeployment -Name blanktemplate -ResourceGroupName myResourceGroup -TemplateFile $templateFile
 
 
