@@ -8,9 +8,14 @@ New-AzResourceGroup -Name myResourceGroup -Location "East US"
 
 # Displey Resource Group
 Get-AzResourceGroup
-  ## Example 1: Get a resource group by name
-  Get-AzResourceGroup -Name "myResourceGroup"
-    ### LInk - https://learn.microsoft.com/en-us/powershell/module/az.resources/get-azresourcegroup?view=azps-11.3.0
+ 	 ## Example 1: Get a resource group by name
+  	Get-AzResourceGroup -Name "myResourceGroup"
+   	 ### LInk - https://learn.microsoft.com/en-us/powershell/module/az.resources/get-azresourcegroup?view=azps-11.3.0
+
+# Remove a resource group
+Remove-AzResourceGroup -Name "ContosoRG01"
+	## Remove a resource group without confirmation
+	Get-AzResourceGroup -Name "ContosoRG01" | Remove-AzResourceGroup -Force
 
 # Deploy Template  
 $templateFile = ".\armdemo.json" 
