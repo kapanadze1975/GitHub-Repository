@@ -37,10 +37,6 @@ New-AzResourceGroupDeployment -ResourceGroupName arm-vscode -TemplateFile ./arm-
   ]
 }
 
-
-
-
-
 ## Clean up resources
 Remove-AzResourceGroup -Name arm-vscode
 
