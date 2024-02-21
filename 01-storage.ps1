@@ -16,7 +16,7 @@ Get-AzResourceGroup
 $templateFile = ".\armdemo.json" 
 New-AzResourceGroupDeployment -Name blanktemplate -ResourceGroupName myResourceGroup -TemplateFile $templateFile
 
-
+test
 
 
 
