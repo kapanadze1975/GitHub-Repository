@@ -4,6 +4,21 @@
     "parameters": {},
     "functions": [],
     "variables": {},
-    "resources": [],
+    "resources": [
+        {
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2023-01-01",
+            "name": "mystoragedemo",
+            "location": "eastus",
+            "sku": {
+                "name": "Standard_LRS"
+            },
+            "kind": "StorageV2",
+            "properties":{
+                "supportsHttpsTrafficOnly": true
+            }  
+        }
+        
+    ],
     "outputs": {}
 }
